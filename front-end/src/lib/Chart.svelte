@@ -1,5 +1,5 @@
 <script>
-  // import { PolarArea } from 'svelte-chartjs';
+  import { PolarArea } from 'svelte-chartjs';
   import { data } from './data.js';
   import { onMount } from 'svelte';
   import { getLateByUsers } from '../api.ts';
@@ -17,23 +17,21 @@
     }
   });
 
-  // import {
-  //   Chart as ChartJS,
-  //   Title,
-  //   Tooltip,
-  //   Legend,
-  //   ArcElement,
-  //   RadialLinearScale,
-  // } from 'chart.js';
+  import {
+    Chart as ChartJS,
+    Title,
+    Tooltip,
+    Legend,
+    ArcElement,
+    RadialLinearScale,
+  } from 'chart.js';
 
-  // ChartJS.register(Title, Tooltip, Legend, ArcElement, RadialLinearScale);
+  ChartJS.register(Title, Tooltip, Legend, ArcElement, RadialLinearScale);
 </script>
 
-<!--<PolarArea-->
-<!--  {data}-->
-<!--  width={600}-->
-<!--  height={600}-->
-<!--  options={{ responsive: false, maintainAspectRatio: false }}-->
-<!--/>-->
-
-<div>Graph</div>
+<PolarArea
+  {data}
+  width={600}
+  height={600}
+  options={{ responsive: false, maintainAspectRatio: false }}
+/>
