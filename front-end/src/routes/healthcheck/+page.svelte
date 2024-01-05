@@ -1,37 +1,17 @@
-<script lang="ts">
+<script>
   import LoadingAnimation from '$lib/LoadingAnimation.svelte';
-  import { PUBLIC_API_URL } from '$env/static/public';
-  import { onMount } from 'svelte';
+  import {getHealth} from "../../api";
 
-  let check: any = null;
-
-  onMount(async () => {
-    try {
-      const response = await fetch(`${PUBLIC_API_URL}/health`);
-      //const data = await response.json();
-      if (response.ok) {
-        check = true;
-      } else {
-        check = false;
-      }
-    } catch (error) {
-      check = false;
-    }
-  });
-
-  function showAPI() {
-    console.log(`${PUBLIC_API_URL}`);
-  }
+  let check = getHealth();
 </script>
 
 <h1 class="text-center mt-10">
   Backend API connexion is:
-  {#if check === null}
+  {#await check}
     <LoadingAnimation />
-  {:else if check}
+  {:then}
     <strong style="color: green;">UP</strong>
-  {:else}
+  {:catch}
     <strong style="color: red;">DOWN</strong>
-  {/if}
+  {/await}
 </h1>
-<button on:click={showAPI}>console log PUBLIC_API_URL</button>

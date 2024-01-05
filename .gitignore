@@ -4,6 +4,7 @@ docs
 .DS_Store
 node_modules
 /front-end/build
+/back-end/build
 .svelte-kit
 /package
 .env

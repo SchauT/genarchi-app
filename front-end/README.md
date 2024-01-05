@@ -37,6 +37,7 @@ You can preview the production build with `npm run preview`.
 
 > To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
 
+
 ## Keeping the Codebase Clean
 
 Les commandes décrites ci-dessous sont également éxécutables depuis la root du projet afin de les appliquer à l'ensemble du projet.

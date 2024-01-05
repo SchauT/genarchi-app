@@ -6,7 +6,7 @@
 
 <div class="navbar bg-base-100">
   <div class="navbar-start">
-    <a class="btn btn-ghost normal-case text-xl" href="/">AppName</a>
+    <a class="btn btn-ghost normal-case text-xl" href="/">LATE COUNTER</a>
   </div>
   <div class="navbar-center hidden lg:flex">
     <ul class="tabs tabs-boxed m-2 p-1">
@@ -52,6 +52,5 @@
         /></svg
       >
     </label>
-    <a class="btn" href="#top">LOGIN/LOGOUT</a>
   </div>
 </div>

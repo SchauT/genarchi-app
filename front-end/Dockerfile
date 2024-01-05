@@ -7,9 +7,9 @@ RUN npm ci
 COPY tsconfig.json .
 COPY src ./src
 COPY static ./static
-#COPY .env.prod .env
-ARG PUBLIC_API_URL
 RUN npm run build
+
+
 
 ### STAGE 2: Production ###
 FROM nginx:alpine
