@@ -10,7 +10,7 @@ export const data = {
                 'rgba(78, 103, 102, 1)',
                 'rgba(90, 177, 187, 1)',
             ],
-            label: 'Late by hour', // for legend
+            label: 'Late by minutes', // for legend
         },
     ],
     labels: ['Arnaud', 'Tom', 'Quentin', 'Omar', 'Ausch', 'Alexandre'],
