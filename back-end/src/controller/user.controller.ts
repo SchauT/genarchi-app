@@ -14,7 +14,14 @@ async function fetchUser(req: Request, res: Response) {
     return res.status(200).send(users);
 }
 
+async function deleteUsers(req: Request, res: Response) {
+    const users = req.body;
+    await userService.deleteUsers(users);
+    return res.status(200).send('Users Deleted');
+}
+
 export default {
     postUsers,
-    fetchUser
+    fetchUser,
+    deleteUsers
 }

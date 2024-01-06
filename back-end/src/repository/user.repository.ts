@@ -20,7 +20,16 @@ async function fetchUser() {
     return users;
 }
 
+async function deleteUser(user: string) {
+    await prisma.user.delete({
+        where: {
+            name: user
+        }
+    })
+}
+
 export default {
     postUser,
-    fetchUser
+    fetchUser,
+    deleteUser
 }

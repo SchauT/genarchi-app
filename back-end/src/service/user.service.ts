@@ -17,8 +17,13 @@ export async function fetchUser() {
     return users;
 }
 
+export async function deleteUsers(users: string[]) {
+    await Promise.all(users.map((user) => userRepository.deleteUser(user)));
+}
+
 export default {
     postUser,
     postUsers,
-    fetchUser
+    fetchUser,
+    deleteUsers
 }

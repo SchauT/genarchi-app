@@ -23,4 +23,13 @@ router.get('', async (req: Request, res: Response, next: NextFunction) => {
     }
 });
 
+router.delete('', async (req: Request, res: Response, next: NextFunction) => {
+    try {
+        await userController.deleteUsers(req, res);
+    }
+    catch (err) {
+        next(err);
+    }
+});
+
 export default router;
