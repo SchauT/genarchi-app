@@ -1,5 +1,6 @@
 import userController from "../controller/user.controller";
 import express, { Request, Response, NextFunction } from "express";
+import * as console from "console";
 
 
 const router = express.Router();
