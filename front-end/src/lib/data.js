@@ -1,9 +1,9 @@
 export const data = {
     datasets: [
         {
-            data: [300, 50, 100, 40, 120, 40],
+            // data: [300, 50, 100, 40, 120, 40],
             backgroundColor: [
-                'rgba(30, 21, 42, 1)',
+                'rgb(109,16,229)',
                 'rgba(247, 221, 114, 1)',
                 'rgba(54, 62, 72, 1)',
                 'rgba(165, 200, 130, 1)',
@@ -13,5 +13,5 @@ export const data = {
             label: 'Late by minutes', // for legend
         },
     ],
-    labels: ['Arnaud', 'Tom', 'Quentin', 'Omar', 'Ausch', 'Alexandre'],
+    // labels: ['Arnaud', 'Tom', 'Quentin', 'Omar', 'Ausch', 'Alexandre'],
 };
