@@ -48,14 +48,14 @@
     <div class="modal-select-container flex justify-center gap-5 items-center">
       <div class="form-control w-full max-w-xs">
         <label class="label" for="customerSelect">
-          <span class="label-text">Pick the customer</span>
+          <span class="label-text">Pick the user</span>
         </label>
         <select
           id="customerSelect"
           class="select select-primary w-full max-w-xs"
           on:change={() => handleNameChange(event.target)}
         >
-          <option disabled selected>Select Customer</option>
+          <option disabled selected>Select User</option>
           {#each users as user}
             <option data-customer-id={user.id}>
               {user.name}
