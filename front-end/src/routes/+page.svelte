@@ -1,5 +1,6 @@
 <script>
-  import AddLate from '$lib/AddLate.Button.svelte';
+  import AddLate from '$lib/buttons/AddLate.svelte';
+  import AddUser from '$lib/buttons/AddUser.svelte';
   import Chart from '$lib/Chart.svelte';
 </script>
 
@@ -13,8 +14,9 @@
   </div>
 
   <!-- Deuxième élément avec une séparation verticale et une marge à gauche -->
-  <div class="border-l border-gray-400 pl-4">
+  <div class="flex flex-col border-l border-gray-400 pl-4">
+    <AddUser />
+    <div class="h-4"></div>
     <AddLate />
-    <div>Maybe add a table here</div>
   </div>
 </div>

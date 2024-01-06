@@ -22,12 +22,12 @@ export const fetchUser = async () => {
     return await fetch(`${env.PUBLIC_API_URL}/user`).then((res) => { console.log(res); return res.json() });
 };
 
-export const postUser = async (user: any) => {
+export const postUser = async (user: string) => {
     return await fetch(`${env.PUBLIC_API_URL}/user`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ user })
+        body: JSON.stringify([user])
     }).then((res) => res.json());
 };

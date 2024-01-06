@@ -1,7 +1,7 @@
 <script>
   // @ts-nocheck
 
-  import {fetchUser, postLate} from '../api.ts';
+  import {fetchUser, postLate} from '../../api.ts';
   import {onMount} from 'svelte';
 
   let users = [];
@@ -39,10 +39,10 @@
 
 <button
   class="bg-teal-400 text-black hover:bg-teal-500 px-6 py-3 rounded-full text-lg font-bold uppercase"
-  onclick="my_modal_4.showModal()">Add Late</button
+  onclick="add_late_modal.showModal()">Add Late</button
 >
 
-<dialog id="my_modal_4" class="modal">
+<dialog id="add_late_modal" class="modal">
   <div class="modal-box w-11/12 max-w-5xl">
     <h3 class="font-bold text-lg">Add a new late! 😠</h3>
     <div class="modal-select-container flex justify-center gap-5 items-center">
