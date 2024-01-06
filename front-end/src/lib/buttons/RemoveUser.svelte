@@ -12,13 +12,11 @@
 
   const removeUser = async () => {
     const selectedUserName = document.getElementById('customerSelect').value.trim();
-    console.log("selectedUserName", selectedUserName)
     if (selectedUserName === '') {
       alert('Please select a customer');
       return;
     }
 
-    console.log("selectedUserName", selectedUserName);
     await deleteUser(selectedUserName);
   };
 </script>
