@@ -4,7 +4,6 @@ import * as console from "console";
 
 async function postUsers(req: Request, res: Response) {
     const users = req.body;
-    console.log(req.body);
     await userService.postUsers(users);
     return res.status(201).send('Users Added');
 }

@@ -1,12 +1,10 @@
 import userController from "../controller/user.controller";
 import express, { Request, Response, NextFunction } from "express";
-import * as console from "console";
 
 
 const router = express.Router();
 
 router.post('', (req: Request, res: Response, next: NextFunction) => {
-    console.log(req.body);
     try {
         userController.postUsers(req, res);
     }

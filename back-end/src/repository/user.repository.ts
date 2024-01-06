@@ -22,8 +22,6 @@ async function fetchUser() {
 }
 
 async function deleteUser(user: string) {
-    console.log("deleteUser :", user);
-
     const userToDelete = await prisma.user.findUnique({
         where: {
             name: user
