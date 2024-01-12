@@ -1,5 +1,6 @@
 import { Request, Response } from 'express';
 import lateService from '../service/late.service';
+import * as console from "console";
 
 async function fetchLateByUsers(req: Request, res: Response) {
     const lateByUser = await lateService.fetchLateByUsers();
@@ -15,7 +16,7 @@ async function postLate(req: Request, res: Response) {
     // return res.status(201).send({prout: "Late Added"});
 
     await lateService.postLate(startedAt, userId);
-    return res.status(201);
+    return res.status(201).send();
 }
 
 export default {
